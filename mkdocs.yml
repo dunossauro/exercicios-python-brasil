@@ -22,7 +22,6 @@ theme:
 
 plugins:
   - search
-  - markdown-exec
   - git-authors:
       show_email_address: false
       show_line_count: true
@@ -35,9 +34,18 @@ markdown_extensions:
 - pymdownx.tabbed:
     alternate_style: true
 
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css
+
 extra_javascript:
-  - assets/javascripts/pyodide.js
-  - assets/javascripts/fonts.js
+  - https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/ace.js
+  - https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js
+  - extras/extra.js
+
+hooks:
+  - hooks/aceodide.py
 
 fonts:
   icon: material/format-font

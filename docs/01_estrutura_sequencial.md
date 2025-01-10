@@ -8,12 +8,13 @@ comments: true
 
 Faça um programa que mostre a mensagem `#!py "Alo mundo"` na tela:
 
+
 === "Código"
-	```pyodide
+	```exercice { test="test_01" }
 	```
 
 === "Resposta"
-	```pyodide
+	```python
 	print('Alo mundo')
 	```
 
