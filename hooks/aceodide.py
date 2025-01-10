@@ -12,14 +12,13 @@ def exercice_validator(language, inputs, options, attrs, md):
 def exercice_format(
     source, language, class_name, options, md, **kwargs
 ):
-    if test := options["test"]:
-        return f'<code-exercice exercice="{test}" source="{source}"></code-exercice>'
+    if test := options.get('test'):
+        return f'<code-exercice testfilepath="{test}" source="{source}"></code-exercice>'
     else:
         return f'<code-exercice source="{source}"></code-exercice>'
 
 
 def on_page_markdown(markdown_text, page, config, files):
-    # breakpoint()
     md = markdown.markdown(
         markdown_text,
         extensions=['pymdownx.superfences'] + config['markdown_extensions'],
@@ -31,7 +30,7 @@ def on_page_markdown(markdown_text, page, config, files):
                         'class': 'exercice',
                         'format': exercice_format,
                         'validator': exercice_validator,
-                    }
+                    },
                 ]
             }
         },

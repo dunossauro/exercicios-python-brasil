@@ -3,7 +3,13 @@ hljs.highlightAll();
 class CodeExercice extends HTMLElement {
     constructor() {
 	super();
-	this.exercice = this.attributes.exercice.value
+	if (this.hasAttribute('testfilepath')) {
+	    this.testPath = this.attributes.testfilepath.value;
+	    this.hasTest = true;
+	} else {
+	    this.testPath = this.id;
+	    this.hasTest = false;
+	}
 	this.source = this.attributes.source.value
 	this.darkTheme = 'github_dark'
 	this.lightTheme = 'github_light_default'
@@ -39,7 +45,7 @@ class CodeExercice extends HTMLElement {
         }
         var downloadLink = document.createElement("a");
         downloadLink.href = dataUrl(this.editor.getValue());
-        downloadLink.download = `${this.exercice}.py`;
+        downloadLink.download = 'exercicio.py';
 
         document.body.appendChild(downloadLink);
         downloadLink.click();
@@ -78,19 +84,18 @@ class CodeExercice extends HTMLElement {
         this.pyodide.setStdout(
 	    {
 		batched: (string) => {
-		    this.writeOutput(string.toString())
+		    this.writeOutput(string.toString());
 		}
 	    }
 	);
-	try {
-            let output = this.pyodide.runPython(this.editor.getValue());
-	    if (output == undefined) {
-		this.writeOutput('Nenhum output detectado...');
-	    } else if (output) {
-                this.writeOutput(output.toString());
-            }
-        } catch (err) {
-            this.writeOutput(err.toString());
+	if (this.editor.getValue()) {
+	    try {
+		let output = this.pyodide.runPython(this.editor.getValue());
+            } catch (err) {
+		this.writeOutput(err.toString());
+	    }
+	} else {
+	    this.writeOutput('Não existe código no editor...');
 	}
     }
 
@@ -111,44 +116,49 @@ class CodeExercice extends HTMLElement {
 
     connectedCallback() {
 	this.getTheme()
-	this.code = `code-${this.exercice}`
+	this.code = `code-${this.testPath}`
         this.innerHTML = `
       <pre id="${this.code}">${this.source}</pre>
       <input
-       id="play-${this.exercice}"
+       id="play-${this.code}"
        name="play"
        type="button"
        value="Play!"/>
       <input
-       id="test-${this.exercice}"
+       id="test-${this.code}"
        name="test"
        type="button"
-       value="Test!"/>
+       value="Test!"
+       disabled/>
       <input
-       id="clean-${this.exercice}"
+       id="clean-${this.code}"
        name="clean"
        type="button"
        value="Clean!"/>
       <input
-       id="save-${this.exercice}"
+       id="save-${this.code}"
        name="save"
        type="button"
        value="Save!"/>
       <input
-       id="copy-${this.exercice}"
+       id="copy-${this.code}"
        name="copy"
        type="button"
        value="Copy!"/>
-      <div id="result-${this.exercice}">Iniciando...</div>
+      <div id="result-${this.code}">Iniciando...</div>
 `
 	this.loadAce();
-	this.result = document.getElementById(`result-${this.exercice}`);
+	this.result = document.getElementById(`result-${this.code}`);
 
-	const playBtn = document.getElementById(`play-${this.exercice}`);
-	const testBtn = document.getElementById(`test-${this.exercice}`);
-	const cleanBtn = document.getElementById(`clean-${this.exercice}`);
-	const saveBtn = document.getElementById(`save-${this.exercice}`);
-	const copyBtn = document.getElementById(`copy-${this.exercice}`);
+	const playBtn = document.getElementById(`play-${this.code}`);
+	const testBtn = document.getElementById(`test-${this.code}`);
+	const cleanBtn = document.getElementById(`clean-${this.code}`);
+	const saveBtn = document.getElementById(`save-${this.code}`);
+	const copyBtn = document.getElementById(`copy-${this.code}`);
+
+	if (this.hasTest) {
+	    testBtn.disabled = false;
+	}
 
 	playBtn.addEventListener('click', () => this.runCode())
 	testBtn.addEventListener('click', () => this.testCode())
@@ -177,7 +187,7 @@ class CodeExercice extends HTMLElement {
 	const globals = this.pyodide.toPy(
 	    {
 		editor: this.editor,
-		exercice: this.exercice
+		testPath: this.testPath
 	    }
 	);
 	let output = this.pyodide.runPythonAsync(`
@@ -186,15 +196,15 @@ from js import window
 from pyodide.http import pyfetch
 from pathlib import Path
 
-
 async def test(exercice: str) -> None:
     with open("sut.py", "w") as f:
         f.write(editor.getValue())
 
     # checar se o arquivo .py já não existe
     if not Path('{exercice}.py').exists():
-        # TODO: ARRUMAR ISSO! (localhost -> window)
-        response = await pyfetch(f"http://localhost:8000/tests/{exercice}.py")
+        response = await pyfetch(
+            f"{window.location.origin}/tests/{exercice}.py"
+        )
     with open(f"{exercice}.py", "wb") as f:
         f.write(await response.bytes())
 
@@ -208,7 +218,7 @@ async def test(exercice: str) -> None:
         ]
     )
 
-test(exercice)
+test(testPath)
 `, { globals })
     }
 }
