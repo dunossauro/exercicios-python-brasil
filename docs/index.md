@@ -17,9 +17,10 @@ Esta é uma lista com sugestões de programas para iniciantes em programação. 
 
 4. [Exercícios sobre listas](04_listas.md){:target="_blank"}
 
-**Em breve**:
+4. [Exercícios sobre funções](05_funcoes.md){:target="_blank"}
 
-5. Exercícios sobre funções
+
+**Em breve**:
 
 6. Exercícios sobre strings
 
