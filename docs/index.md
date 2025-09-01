@@ -17,19 +17,20 @@ Esta é uma lista com sugestões de programas para iniciantes em programação. 
 
 4. [Exercícios sobre listas](04_listas.md){:target="_blank"}
 
-4. [Exercícios sobre funções](05_funcoes.md){:target="_blank"}
+5. [Exercícios sobre funções](05_funcoes.md){:target="_blank"}
+
+6. [Exercícios sobre strings](06_strings.md){:target="_blank"}
+
 
 > Diversas melhorias estão previstas e podem ser discutidas nas [issues](https://github.com/dunossauro/exercicios-python-brasil/issues) desse projeto.
 
 **Em breve**:
 
-6. Exercícios sobre strings
+- Exercícios sobre manipulação de arquivos
 
-7. Exercícios sobre manipulação de arquivos
+- Exercícios sobre classes
 
-8. Exercícios sobre classes
-
-9. Lista de exercícios em projetos
+- Lista de exercícios em projetos
 
 
 ---
