@@ -17,18 +17,15 @@ Esta é uma lista com sugestões de programas para iniciantes em programação. 
 6. [Exercícios sobre strings](06_strings.md){:target="_blank"}
 7. [Exercícios sobre manipulação de arquivos](07_arquivos.md){:target="_blank"}
 8. [Exercícios sobre classes](08_classes.md){:target="_blank"}
+9. [Lista de projetos](09_projetos.md){:target="_blank"}
 
 
 > Diversas melhorias estão previstas e podem ser discutidas nas [issues](https://github.com/dunossauro/exercicios-python-brasil/issues) desse projeto.
-
-**Em breve**:
-
-- Lista de exercícios em projetos
 
 ---
 
 Essa lista de exercício foi originalmente escrita na wiki oficial da Python Brasil: [https://wiki.python.org.br/ListaDeExercicios](https://wiki.python.org.br/ListaDeExercicios)[^2].
 
 
-[^1]: Embora, nessa página as execuções no navegador estejam disponíveis somente em python.
-[^2]: O link oficial está atualmente fora do ar. Existe uma discução rolando [aqui](https://github.com/pythonbrasil/wiki/issues/313) para decidir o futuro da antiga lista.
+[^1]: Embora, nessa página, as execuções no navegador estejam disponíveis somente em python.
+[^2]: O link oficial está atualmente fora do ar. Existe uma discussão rolando [aqui](https://github.com/pythonbrasil/wiki/issues/313) para decidir o futuro da antiga lista.
