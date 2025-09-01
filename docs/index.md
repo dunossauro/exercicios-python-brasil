@@ -10,28 +10,20 @@ Esta é uma lista com sugestões de programas para iniciantes em programação. 
 **Listas de exercícios**:
 
 1. [Estrutura sequencial](01_estrutura_sequencial.md){:target="_blank"}
-
 2. [Estrutura de decisão](02_estrutura_de_decisao.md){:target="_blank"}
-
 3. [Estrutura de repetição](03_estrutura_de_repeticao.md){:target="_blank"}
-
 4. [Exercícios sobre listas](04_listas.md){:target="_blank"}
-
 5. [Exercícios sobre funções](05_funcoes.md){:target="_blank"}
-
 6. [Exercícios sobre strings](06_strings.md){:target="_blank"}
+7. [Exercícios sobre manipulação de arquivos](07_arquivos.md){:target="_blank"}
+8. [Exercícios sobre manipulação de arquivos](08_classes.md){:target="_blank"}
 
 
 > Diversas melhorias estão previstas e podem ser discutidas nas [issues](https://github.com/dunossauro/exercicios-python-brasil/issues) desse projeto.
 
 **Em breve**:
 
-- Exercícios sobre manipulação de arquivos
-
-- Exercícios sobre classes
-
 - Lista de exercícios em projetos
-
 
 ---
 
