@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Exercícios sobre funções
 
 #### Exercício 01

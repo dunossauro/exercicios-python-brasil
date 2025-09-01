@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Exercícios sobre listas
 
 #### Exercício 01
