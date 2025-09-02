@@ -32,7 +32,11 @@ Faça um programa que peça um valor e mostre na tela se o valor é positivo ou 
 
 #### Exercício 03
 
-Faça um programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+Faça um programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever:
+
+- F - Feminino
+- M - Masculino
+- Sexo Inválido.
 
 === "Código"
 	```pyodide
@@ -92,7 +96,13 @@ Faça um programa que leia três números e mostre-os em ordem decrescente:
 
 #### Exercício 10
 
-Faça um programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+Faça um programa que pergunte em que turno você estuda. Peça para digitar: 
+
+- M - Matutino
+- V - Vespertino
+- N - Noturno.
+
+Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 
 === "Código"
 	```pyodide
