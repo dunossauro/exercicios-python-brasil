@@ -4,6 +4,7 @@ repo_url: https://github.com/dunossauro/exercicios-python-brasil
 repo_name: dunossauro/exercicios-python-brasil
 
 theme:
+  language: pt
   favicon: assets/images/favicon.ico
   logo: assets/images/logo_python.webp
   name: material
