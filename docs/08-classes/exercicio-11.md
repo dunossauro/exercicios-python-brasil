@@ -17,7 +17,7 @@ Exemplo de uso:
 meu_fusca = Carro(15)             # 15 quilômetros por litro de combustível.
 meu_fusca.adicionar_gasolina(20)  # abastece com 20 litros de combustível.
 meu_fusca.andar(100)              # anda 100 quilômetros.
-meu_fusca.obter_gasolina()         # Imprime o combustível que resta no tanque.
+meu_fusca.obter_gasolina()        # Imprime o combustível que resta no tanque.
 ```
 
 === "Código"
