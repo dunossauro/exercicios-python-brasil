@@ -43,7 +43,6 @@ markdown_extensions:
     alternate_style: true
 
 extra_javascript:
-  - assets/javascripts/pyodide.js
   - assets/javascripts/fonts.js
 
 fonts:
@@ -244,3 +243,11 @@ nav:
       - "Projeto 01": 09-projetos/projeto-01.md
       - "Projeto 02": 09-projetos/projeto-02.md
       - "Projeto 03": 09-projetos/projeto-03.md
+  - Dados:
+      - 10-dados/index.md
+      - "Exercício 01": 10-dados/exercicio-01.md
+      - "Exercício 02": 10-dados/exercicio-02.md
+      - "Exercício 03": 10-dados/exercicio-03.md
+      - "Exercício 04": 10-dados/exercicio-04.md
+      - "Exercício 05": 10-dados/exercicio-05.md
+      - "Exercício 06": 10-dados/exercicio-06.md

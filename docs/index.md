@@ -21,6 +21,7 @@ Esta é uma lista com sugestões de programas para iniciantes em programação. 
 7. [Exercícios sobre manipulação de arquivos](07-arquivos/index.md){:target="_blank"}
 8. [Exercícios sobre classes](08-classes/index.md){:target="_blank"}
 9. [Lista de projetos](09-projetos/index.md){:target="_blank"}
+10. [Lista de dados](10-dados/index.md){:target="_blank"}
 
 
 > Diversas melhorias estão previstas e podem ser discutidas nas [issues](https://github.com/dunossauro/exercicios-python-brasil/issues) desse projeto.
