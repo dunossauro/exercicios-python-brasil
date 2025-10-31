@@ -761,6 +761,47 @@
 </tr>
 </tbody>
 </table>
+<p>Ao executar o bloco abaixo, todos os dados da tabela serão carregados para todos os exercícios seguintes:</p>
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-181--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-181--editor" class="pyodide-editor">data = [
+    {"id":1, "nome": "Maria", "salario": 4500.03},
+    {"id":2, "nome": "José", "salario": 6500.05},
+    {"id":3, "nome": "Antonio", "salario": 3409.98},
+    {"id":4, "nome": "Ana", "salario": 5093.34},
+    {"id":5, "nome": "Mariana", "salario": 3458.54},
+    {"id":6, "nome": "Ana", "salario": 10932.59},
+]
+print(data)</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-181--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-181--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-181--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=9,
+        maxLines=9,
+    );
+});
+</script>
+</p>
 <h4 id="exercicio-01">Exercício 01</h4>
 <p><strong>Média de salário</strong></p>
 <p>Qual o valor do salário médio?</p>
@@ -770,72 +811,15 @@
 <p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
 <link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
 
 <div class="pyodide">
 <div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-181--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-182--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
 </div>
-<div><pre id="exec-181--editor" class="pyodide-editor">import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-
-df = pd.DataFrame(data)</pre></div>
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Output</span><span id="exec-181--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
-</div>
-<pre><code id="exec-181--output" class="pyodide-output"></code></pre>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-181--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
-});
-</script>
-</p>
-</div>
-<div class="tabbed-block">
-<p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
-<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
-<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
-
-<div class="pyodide">
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-182--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
-</div>
-<div><pre id="exec-182--editor" class="pyodide-editor">
-import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-df = pd.DataFrame(data)
-
-media = df['salario'].mean()
-print(f"Salário Médio: R${media:.2f}")</pre></div>
+<div><pre id="exec-182--editor" class="pyodide-editor">print(data)</pre></div>
 <div class="pyodide-editor-bar">
 <span class="pyodide-bar-item">Output</span><span id="exec-182--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
 </div>
@@ -844,7 +828,54 @@ print(f"Salário Médio: R${media:.2f}")</pre></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-182--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+    setupPyodide(
+        'exec-182--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-183--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-183--editor" class="pyodide-editor">import pandas as pd
+
+df = pd.DataFrame(data)
+
+media = df['salario'].mean()
+print(f"Salário Médio: R${media:.2f}")</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-183--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-183--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-183--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
 });
 </script>
 </p>
@@ -860,72 +891,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
 <link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
 
 <div class="pyodide">
 <div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-183--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-184--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
 </div>
-<div><pre id="exec-183--editor" class="pyodide-editor">import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-
-df = pd.DataFrame(data)</pre></div>
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Output</span><span id="exec-183--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
-</div>
-<pre><code id="exec-183--output" class="pyodide-output"></code></pre>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-183--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
-});
-</script>
-</p>
-</div>
-<div class="tabbed-block">
-<p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
-<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
-<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
-
-<div class="pyodide">
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-184--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
-</div>
-<div><pre id="exec-184--editor" class="pyodide-editor">
-import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-df = pd.DataFrame(data)
-
-qtde = df.shape[0]
-print(f"Quantidade de linhas: {qtde}")</pre></div>
+<div><pre id="exec-184--editor" class="pyodide-editor">print(data)</pre></div>
 <div class="pyodide-editor-bar">
 <span class="pyodide-bar-item">Output</span><span id="exec-184--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
 </div>
@@ -934,7 +908,54 @@ print(f"Quantidade de linhas: {qtde}")</pre></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-184--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+    setupPyodide(
+        'exec-184--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-185--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-185--editor" class="pyodide-editor">import pandas as pd
+
+df = pd.DataFrame(data)
+
+qtde = df.shape[0]
+print(f"Quantidade de linhas: {qtde}")</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-185--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-185--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-185--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
 });
 </script>
 </p>
@@ -950,72 +971,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
 <link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
 
 <div class="pyodide">
 <div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-185--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-186--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
 </div>
-<div><pre id="exec-185--editor" class="pyodide-editor">import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-
-df = pd.DataFrame(data)</pre></div>
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Output</span><span id="exec-185--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
-</div>
-<pre><code id="exec-185--output" class="pyodide-output"></code></pre>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-185--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
-});
-</script>
-</p>
-</div>
-<div class="tabbed-block">
-<p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
-<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
-<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
-
-<div class="pyodide">
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-186--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
-</div>
-<div><pre id="exec-186--editor" class="pyodide-editor">
-import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-df = pd.DataFrame(data)
-
-qtde = df.shape[1]
-print(f"Quantidade de colunas: {qtde}")</pre></div>
+<div><pre id="exec-186--editor" class="pyodide-editor">print(data)</pre></div>
 <div class="pyodide-editor-bar">
 <span class="pyodide-bar-item">Output</span><span id="exec-186--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
 </div>
@@ -1024,7 +988,54 @@ print(f"Quantidade de colunas: {qtde}")</pre></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-186--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+    setupPyodide(
+        'exec-186--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-187--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-187--editor" class="pyodide-editor">import pandas as pd
+
+df = pd.DataFrame(data)
+
+qtde = df.shape[1]
+print(f"Quantidade de colunas: {qtde}")</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-187--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-187--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-187--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
 });
 </script>
 </p>
@@ -1040,72 +1051,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
 <link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
 
 <div class="pyodide">
 <div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-187--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-188--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
 </div>
-<div><pre id="exec-187--editor" class="pyodide-editor">import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-
-df = pd.DataFrame(data)</pre></div>
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Output</span><span id="exec-187--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
-</div>
-<pre><code id="exec-187--output" class="pyodide-output"></code></pre>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-187--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
-});
-</script>
-</p>
-</div>
-<div class="tabbed-block">
-<p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
-<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
-<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
-
-<div class="pyodide">
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-188--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
-</div>
-<div><pre id="exec-188--editor" class="pyodide-editor">
-import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-df = pd.DataFrame(data)
-
-estatisticas = df['salario'].describe().round(2)
-print(f"Principais estatísticas:\n{estatisticas}")</pre></div>
+<div><pre id="exec-188--editor" class="pyodide-editor">print(data)</pre></div>
 <div class="pyodide-editor-bar">
 <span class="pyodide-bar-item">Output</span><span id="exec-188--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
 </div>
@@ -1114,7 +1068,54 @@ print(f"Principais estatísticas:\n{estatisticas}")</pre></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-188--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+    setupPyodide(
+        'exec-188--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-189--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-189--editor" class="pyodide-editor">import pandas as pd
+
+df = pd.DataFrame(data)
+
+estatisticas = df['salario'].describe().round(2)
+print(f"Principais estatísticas:\n{estatisticas}")</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-189--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-189--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-189--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
 });
 </script>
 </p>
@@ -1130,72 +1131,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
 <link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
 
 <div class="pyodide">
 <div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-189--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-190--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
 </div>
-<div><pre id="exec-189--editor" class="pyodide-editor">import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-
-df = pd.DataFrame(data)</pre></div>
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Output</span><span id="exec-189--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
-</div>
-<pre><code id="exec-189--output" class="pyodide-output"></code></pre>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-189--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
-});
-</script>
-</p>
-</div>
-<div class="tabbed-block">
-<p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
-<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
-<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
-
-<div class="pyodide">
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-190--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
-</div>
-<div><pre id="exec-190--editor" class="pyodide-editor">
-import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-df = pd.DataFrame(data)
-
-df = df.sort_values(by=['nome', 'salario'], ascending=[True, False])
-print(f"Resultado ordenado:\n{df}")</pre></div>
+<div><pre id="exec-190--editor" class="pyodide-editor">print(data)</pre></div>
 <div class="pyodide-editor-bar">
 <span class="pyodide-bar-item">Output</span><span id="exec-190--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
 </div>
@@ -1204,7 +1148,54 @@ print(f"Resultado ordenado:\n{df}")</pre></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-190--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+    setupPyodide(
+        'exec-190--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-191--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-191--editor" class="pyodide-editor">import pandas as pd
+
+df = pd.DataFrame(data)
+
+df = df.sort_values(by=['nome', 'salario'], ascending=[True, False])
+print(f"Resultado ordenado:\n{df}")</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-191--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-191--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-191--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
 });
 </script>
 </p>
@@ -1220,72 +1211,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
 <link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
 
 <div class="pyodide">
 <div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-191--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-192--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
 </div>
-<div><pre id="exec-191--editor" class="pyodide-editor">import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-
-df = pd.DataFrame(data)</pre></div>
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Output</span><span id="exec-191--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
-</div>
-<pre><code id="exec-191--output" class="pyodide-output"></code></pre>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-191--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
-});
-</script>
-</p>
-</div>
-<div class="tabbed-block">
-<p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
-<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
-<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
-
-<div class="pyodide">
-<div class="pyodide-editor-bar">
-<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-192--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
-</div>
-<div><pre id="exec-192--editor" class="pyodide-editor">
-import micropip
-await micropip.install("pandas")
-
-import pandas as pd
-
-data = [
-    {"id":1, "nome": "Maria", "salario": 4500.03},
-    {"id":2, "nome": "José", "salario": 6500.05},
-    {"id":3, "nome": "Antonio", "salario": 3409.98},
-    {"id":4, "nome": "Ana", "salario": 5093.34},
-    {"id":5, "nome": "Mariana", "salario": 3458.54},
-    {"id":6, "nome": "Ana", "salario": 10932.59},
-]
-df = pd.DataFrame(data)
-
-df = df.drop_duplicates(subset=['nome'], keep='last')
-print(df)</pre></div>
+<div><pre id="exec-192--editor" class="pyodide-editor">print(data)</pre></div>
 <div class="pyodide-editor-bar">
 <span class="pyodide-bar-item">Output</span><span id="exec-192--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
 </div>
@@ -1294,7 +1228,54 @@ print(df)</pre></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
-    setupPyodide('exec-192--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+    setupPyodide(
+        'exec-192--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: data)</span><span id="exec-193--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-193--editor" class="pyodide-editor">import pandas as pd
+
+df = pd.DataFrame(data)
+
+df = df.drop_duplicates(subset=['nome'], keep='last')
+print(df)</pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-193--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-193--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide(
+        'exec-193--',
+        install=['pandas'],
+        themeLight='tomorrow',
+        themeDark='tomorrow_night',
+        session='data',
+        minLines=10,
+        maxLines=10,
+    );
 });
 </script>
 </p>
@@ -1332,11 +1313,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
-      Teo Calvo
+      dunossauro, Teo Calvo
     </nav>
   </span>
 
@@ -1443,8 +1424,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../assets/_markdown_exec_pyodide.js"></script>
-      
-        <script src="../assets/javascripts/pyodide.js"></script>
       
         <script src="../assets/javascripts/fonts.js"></script>
       
