@@ -37,7 +37,6 @@ markdown_extensions:
     alternate_style: true
 
 extra_javascript:
-  - assets/javascripts/pyodide.js
   - assets/javascripts/fonts.js
 
 fonts:
