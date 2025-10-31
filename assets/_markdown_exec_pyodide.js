@@ -16,15 +16,15 @@ function clearOutput(element) {
 }
 
 async function evaluatePython(pyodide, editor, output, session) {
-    pyodide.setStdout({ batched: (string) => { writeOutput(output, new Option(string).innerHTML); } });
+    pyodide.setStdout({ batched: (string) => { writeOutput(output, string); } });
     let result, code = editor.getValue();
     clearOutput(output);
     try {
         result = await pyodide.runPythonAsync(code, { globals: getSession(session, pyodide) });
     } catch (error) {
-        writeOutput(output, new Option(error.toString()).innerHTML);
+        writeOutput(output, error);
     }
-    if (result) writeOutput(output, new Option(result).innerHTML);
+    if (result) writeOutput(output, result);
     hljs.highlightElement(output);
 }
 
@@ -77,15 +77,7 @@ function updateTheme(editor, light, dark) {
     });
 }
 
-async function setupPyodide(
-    idPrefix,
-    install = null,
-    themeLight = 'tomorrow',
-    themeDark = 'tomorrow_night',
-    session = null,
-    minLines = 5,
-    maxLines = 30,
-) {
+async function setupPyodide(idPrefix, install = null, themeLight = 'tomorrow', themeDark = 'tomorrow_night', session = null) {
     const editor = ace.edit(idPrefix + "editor");
     const run = document.getElementById(idPrefix + "run");
     const clear = document.getElementById(idPrefix + "clear");
@@ -96,28 +88,14 @@ async function setupPyodide(
     editor.session.setMode("ace/mode/python");
     setTheme(editor, getTheme(), themeLight, themeDark);
 
-    editor.setOption("minLines", minLines);
-    editor.setOption("maxLines", maxLines);
-
-    // Force editor to resize after setting options
-    editor.resize();
-
     writeOutput(output, "Initializing...");
     let pyodide = await pyodidePromise;
     if (install && install.length) {
-        try {
-            micropip = pyodide.pyimport("micropip");
-            for (const package of install)
-                await micropip.install(package);
-            clearOutput(output);
-        } catch (error) {
-            clearOutput(output);
-            writeOutput(output, `Could not install one or more packages: ${install.join(", ")}\n`);
-            writeOutput(output, new Option(error.toString()).innerHTML);
-        }
-    } else {
-        clearOutput(output);
+        micropip = pyodide.pyimport("micropip");
+        for (const package of install)
+            await micropip.install(package);
     }
+    clearOutput(output);
     run.onclick = () => evaluatePython(pyodide, editor, output, session);
     clear.onclick = () => clearOutput(output);
     output.parentElement.parentElement.addEventListener("keydown", (event) => {
