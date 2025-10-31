@@ -272,22 +272,22 @@ testing = ["coverage", "pyyaml"]
 
 [[package]]
 name = "markdown-exec"
-version = "1.11.0"
+version = "1.9.3"
 description = "Utilities to execute code blocks in Markdown files."
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "markdown_exec-1.11.0-py3-none-any.whl", hash = "sha256:0526957984980f55c02b425d32e8ac8bb21090c109c7012ff905d3ddcc468ceb"},
-    {file = "markdown_exec-1.11.0.tar.gz", hash = "sha256:e0313a0dff715869a311d24853b3a7ecbbaa12e74eb0f3cf7d91401a7d8f0082"},
+    {file = "markdown_exec-1.9.3-py3-none-any.whl", hash = "sha256:6b3f5f35d9c74e3c7ba9011376ad1732aa3ed3806cadefb8522dee3afe02b1ec"},
+    {file = "markdown_exec-1.9.3.tar.gz", hash = "sha256:6ad206b75306020779144835f44de115235903755c46a7ccd3b754aad74661e1"},
 ]
 
 [package.dependencies]
-pygments-ansi-color = {version = ">=0.3", optional = true, markers = "extra == \"ansi\""}
+pygments-ansi-color = {version = "*", optional = true, markers = "extra == \"ansi\""}
 pymdown-extensions = ">=9"
 
 [package.extras]
-ansi = ["pygments-ansi-color (>=0.3)"]
+ansi = ["pygments-ansi-color"]
 
 [[package]]
 name = "markupsafe"
@@ -925,4 +925,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "dc0167a453d1a2cf6d6b0e6f4a48ce757e3d0e1b7962a2af9c0478d1920c7229"
+content-hash = "764471765e2f0db57610007f61e0dfd49acdf21b60063c3b82cf47588c36c182"
