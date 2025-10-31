@@ -4,6 +4,7 @@ repo_url: https://github.com/dunossauro/exercicios-python-brasil
 repo_name: dunossauro/exercicios-python-brasil
 
 theme:
+  language: pt
   favicon: assets/images/favicon.ico
   logo: assets/images/logo_python.webp
   name: material
@@ -19,6 +20,11 @@ theme:
       toggle:
         icon: material/weather-night
         name: Modo noturno
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
 
 plugins:
   - search
@@ -47,3 +53,202 @@ fonts:
     - text: OpenDyslexic
       code: OpenDyslexicMono
       src: https://fonts.cdnfonts.com/css/opendyslexic
+
+nav:
+  - "Estrutura Sequencial":
+      - 01-estrutura-sequencial/index.md
+      - "Exercício 01": 01-estrutura-sequencial/exercicio-01.md
+      - "Exercício 02": 01-estrutura-sequencial/exercicio-02.md
+      - "Exercício 03": 01-estrutura-sequencial/exercicio-03.md
+      - "Exercício 04": 01-estrutura-sequencial/exercicio-04.md
+      - "Exercício 05": 01-estrutura-sequencial/exercicio-05.md
+      - "Exercício 06": 01-estrutura-sequencial/exercicio-06.md
+      - "Exercício 07": 01-estrutura-sequencial/exercicio-07.md
+      - "Exercício 08": 01-estrutura-sequencial/exercicio-08.md
+      - "Exercício 09": 01-estrutura-sequencial/exercicio-09.md
+      - "Exercício 10": 01-estrutura-sequencial/exercicio-10.md
+      - "Exercício 11": 01-estrutura-sequencial/exercicio-11.md
+      - "Exercício 12": 01-estrutura-sequencial/exercicio-12.md
+      - "Exercício 13": 01-estrutura-sequencial/exercicio-13.md
+      - "Exercício 14": 01-estrutura-sequencial/exercicio-14.md
+      - "Exercício 15": 01-estrutura-sequencial/exercicio-15.md
+      - "Exercício 16": 01-estrutura-sequencial/exercicio-16.md
+      - "Exercício 17": 01-estrutura-sequencial/exercicio-17.md
+      - "Exercício 18": 01-estrutura-sequencial/exercicio-18.md
+  - "Estrutura de decisão":
+      - 02-estrutura-de-decisao/index.md
+      - "Exercício 01": 02-estrutura-de-decisao/exercicio-01.md
+      - "Exercício 02": 02-estrutura-de-decisao/exercicio-02.md
+      - "Exercício 03": 02-estrutura-de-decisao/exercicio-03.md
+      - "Exercício 04": 02-estrutura-de-decisao/exercicio-04.md
+      - "Exercício 05": 02-estrutura-de-decisao/exercicio-05.md
+      - "Exercício 06": 02-estrutura-de-decisao/exercicio-06.md
+      - "Exercício 07": 02-estrutura-de-decisao/exercicio-07.md
+      - "Exercício 08": 02-estrutura-de-decisao/exercicio-08.md
+      - "Exercício 09": 02-estrutura-de-decisao/exercicio-09.md
+      - "Exercício 10": 02-estrutura-de-decisao/exercicio-10.md
+      - "Exercício 11": 02-estrutura-de-decisao/exercicio-11.md
+      - "Exercício 12": 02-estrutura-de-decisao/exercicio-12.md
+      - "Exercício 13": 02-estrutura-de-decisao/exercicio-13.md
+      - "Exercício 14": 02-estrutura-de-decisao/exercicio-14.md
+      - "Exercício 15": 02-estrutura-de-decisao/exercicio-15.md
+      - "Exercício 16": 02-estrutura-de-decisao/exercicio-16.md
+      - "Exercício 17": 02-estrutura-de-decisao/exercicio-17.md
+      - "Exercício 18": 02-estrutura-de-decisao/exercicio-18.md
+      - "Exercício 19": 02-estrutura-de-decisao/exercicio-19.md
+      - "Exercício 20": 02-estrutura-de-decisao/exercicio-20.md
+      - "Exercício 21": 02-estrutura-de-decisao/exercicio-21.md
+      - "Exercício 22": 02-estrutura-de-decisao/exercicio-22.md
+      - "Exercício 23": 02-estrutura-de-decisao/exercicio-23.md
+      - "Exercício 24": 02-estrutura-de-decisao/exercicio-24.md
+      - "Exercício 25": 02-estrutura-de-decisao/exercicio-25.md
+      - "Exercício 26": 02-estrutura-de-decisao/exercicio-26.md
+      - "Exercício 27": 02-estrutura-de-decisao/exercicio-27.md
+      - "Exercício 28": 02-estrutura-de-decisao/exercicio-28.md
+  - "Estrutura de repetição":
+      - 03-estrutura-de-repeticao/index.md
+      - "Exercício 01": 03-estrutura-de-repeticao/exercicio-01.md
+      - "Exercício 02": 03-estrutura-de-repeticao/exercicio-02.md
+      - "Exercício 03": 03-estrutura-de-repeticao/exercicio-03.md
+      - "Exercício 04": 03-estrutura-de-repeticao/exercicio-04.md
+      - "Exercício 05": 03-estrutura-de-repeticao/exercicio-05.md
+      - "Exercício 06": 03-estrutura-de-repeticao/exercicio-06.md
+      - "Exercício 07": 03-estrutura-de-repeticao/exercicio-07.md
+      - "Exercício 08": 03-estrutura-de-repeticao/exercicio-08.md
+      - "Exercício 09": 03-estrutura-de-repeticao/exercicio-09.md
+      - "Exercício 10": 03-estrutura-de-repeticao/exercicio-10.md
+      - "Exercício 11": 03-estrutura-de-repeticao/exercicio-11.md
+      - "Exercício 12": 03-estrutura-de-repeticao/exercicio-12.md
+      - "Exercício 13": 03-estrutura-de-repeticao/exercicio-13.md
+      - "Exercício 14": 03-estrutura-de-repeticao/exercicio-14.md
+      - "Exercício 15": 03-estrutura-de-repeticao/exercicio-15.md
+      - "Exercício 16": 03-estrutura-de-repeticao/exercicio-16.md
+      - "Exercício 17": 03-estrutura-de-repeticao/exercicio-17.md
+      - "Exercício 18": 03-estrutura-de-repeticao/exercicio-18.md
+      - "Exercício 19": 03-estrutura-de-repeticao/exercicio-19.md
+      - "Exercício 20": 03-estrutura-de-repeticao/exercicio-20.md
+      - "Exercício 21": 03-estrutura-de-repeticao/exercicio-21.md
+      - "Exercício 22": 03-estrutura-de-repeticao/exercicio-22.md
+      - "Exercício 23": 03-estrutura-de-repeticao/exercicio-23.md
+      - "Exercício 24": 03-estrutura-de-repeticao/exercicio-24.md
+      - "Exercício 25": 03-estrutura-de-repeticao/exercicio-25.md
+      - "Exercício 26": 03-estrutura-de-repeticao/exercicio-26.md
+      - "Exercício 27": 03-estrutura-de-repeticao/exercicio-27.md
+      - "Exercício 28": 03-estrutura-de-repeticao/exercicio-28.md
+      - "Exercício 29": 03-estrutura-de-repeticao/exercicio-29.md
+      - "Exercício 30": 03-estrutura-de-repeticao/exercicio-30.md
+      - "Exercício 31": 03-estrutura-de-repeticao/exercicio-31.md
+      - "Exercício 32": 03-estrutura-de-repeticao/exercicio-32.md
+      - "Exercício 33": 03-estrutura-de-repeticao/exercicio-33.md
+      - "Exercício 34": 03-estrutura-de-repeticao/exercicio-34.md
+      - "Exercício 35": 03-estrutura-de-repeticao/exercicio-35.md
+      - "Exercício 36": 03-estrutura-de-repeticao/exercicio-36.md
+      - "Exercício 37": 03-estrutura-de-repeticao/exercicio-37.md
+      - "Exercício 38": 03-estrutura-de-repeticao/exercicio-38.md
+      - "Exercício 39": 03-estrutura-de-repeticao/exercicio-39.md
+      - "Exercício 40": 03-estrutura-de-repeticao/exercicio-40.md
+      - "Exercício 41": 03-estrutura-de-repeticao/exercicio-41.md
+      - "Exercício 42": 03-estrutura-de-repeticao/exercicio-42.md
+      - "Exercício 43": 03-estrutura-de-repeticao/exercicio-43.md
+      - "Exercício 44": 03-estrutura-de-repeticao/exercicio-44.md
+      - "Exercício 45": 03-estrutura-de-repeticao/exercicio-45.md
+      - "Exercício 46": 03-estrutura-de-repeticao/exercicio-46.md
+      - "Exercício 47": 03-estrutura-de-repeticao/exercicio-47.md
+      - "Exercício 48": 03-estrutura-de-repeticao/exercicio-48.md
+      - "Exercício 49": 03-estrutura-de-repeticao/exercicio-49.md
+      - "Exercício 50": 03-estrutura-de-repeticao/exercicio-50.md
+      - "Exercício 51": 03-estrutura-de-repeticao/exercicio-51.md
+  - Listas:
+      - 04-listas/index.md
+      - "Exercício 01": 04-listas/exercicio-01.md
+      - "Exercício 02": 04-listas/exercicio-02.md
+      - "Exercício 03": 04-listas/exercicio-03.md
+      - "Exercício 04": 04-listas/exercicio-04.md
+      - "Exercício 05": 04-listas/exercicio-05.md
+      - "Exercício 06": 04-listas/exercicio-06.md
+      - "Exercício 07": 04-listas/exercicio-07.md
+      - "Exercício 08": 04-listas/exercicio-08.md
+      - "Exercício 09": 04-listas/exercicio-09.md
+      - "Exercício 10": 04-listas/exercicio-10.md
+      - "Exercício 11": 04-listas/exercicio-11.md
+      - "Exercício 12": 04-listas/exercicio-12.md
+      - "Exercício 13": 04-listas/exercicio-13.md
+      - "Exercício 14": 04-listas/exercicio-14.md
+      - "Exercício 15": 04-listas/exercicio-15.md
+      - "Exercício 16": 04-listas/exercicio-16.md
+      - "Exercício 17": 04-listas/exercicio-17.md
+      - "Exercício 18": 04-listas/exercicio-18.md
+      - "Exercício 19": 04-listas/exercicio-19.md
+      - "Exercício 20": 04-listas/exercicio-20.md
+      - "Exercício 21": 04-listas/exercicio-21.md
+      - "Exercício 22": 04-listas/exercicio-22.md
+      - "Exercício 23": 04-listas/exercicio-23.md
+      - "Exercício 24": 04-listas/exercicio-24.md
+  - Funções:
+      - 05-funcoes/index.md
+      - "Exercício 01": 05-funcoes/exercicio-01.md
+      - "Exercício 02": 05-funcoes/exercicio-02.md
+      - "Exercício 03": 05-funcoes/exercicio-03.md
+      - "Exercício 04": 05-funcoes/exercicio-04.md
+      - "Exercício 05": 05-funcoes/exercicio-05.md
+      - "Exercício 06": 05-funcoes/exercicio-06.md
+      - "Exercício 07": 05-funcoes/exercicio-07.md
+      - "Exercício 08": 05-funcoes/exercicio-08.md
+      - "Exercício 09": 05-funcoes/exercicio-09.md
+      - "Exercício 10": 05-funcoes/exercicio-10.md
+      - "Exercício 11": 05-funcoes/exercicio-11.md
+      - "Exercício 12": 05-funcoes/exercicio-12.md
+      - "Exercício 13": 05-funcoes/exercicio-13.md
+      - "Exercício 14": 05-funcoes/exercicio-14.md
+  - Strings:
+      - 06-strings/index.md
+      - "Exercício 01": 06-strings/exercicio-01.md
+      - "Exercício 02": 06-strings/exercicio-02.md
+      - "Exercício 03": 06-strings/exercicio-03.md
+      - "Exercício 04": 06-strings/exercicio-04.md
+      - "Exercício 05": 06-strings/exercicio-05.md
+      - "Exercício 06": 06-strings/exercicio-06.md
+      - "Exercício 07": 06-strings/exercicio-07.md
+      - "Exercício 08": 06-strings/exercicio-08.md
+      - "Exercício 09": 06-strings/exercicio-09.md
+      - "Exercício 10": 06-strings/exercicio-10.md
+      - "Exercício 11": 06-strings/exercicio-11.md
+      - "Exercício 12": 06-strings/exercicio-12.md
+      - "Exercício 13": 06-strings/exercicio-13.md
+      - "Exercício 14": 06-strings/exercicio-14.md
+  - Arquivos:
+      - 07-arquivos/index.md
+      - "Exercício 01": 07-arquivos/exercicio-01.md
+      - "Exercício 02": 07-arquivos/exercicio-02.md
+  - Classes:
+      - 08-classes/index.md
+      - "Exercício 01": 08-classes/exercicio-01.md
+      - "Exercício 02": 08-classes/exercicio-02.md
+      - "Exercício 03": 08-classes/exercicio-03.md
+      - "Exercício 04": 08-classes/exercicio-04.md
+      - "Exercício 05": 08-classes/exercicio-05.md
+      - "Exercício 06": 08-classes/exercicio-06.md
+      - "Exercício 07": 08-classes/exercicio-07.md
+      - "Exercício 08": 08-classes/exercicio-08.md
+      - "Exercício 09": 08-classes/exercicio-09.md
+      - "Exercício 10": 08-classes/exercicio-10.md
+      - "Exercício 11": 08-classes/exercicio-11.md
+      - "Exercício 12": 08-classes/exercicio-12.md
+      - "Exercício 13": 08-classes/exercicio-13.md
+      - "Exercício 14": 08-classes/exercicio-14.md
+      - "Exercício 15": 08-classes/exercicio-15.md
+      - "Exercício 16": 08-classes/exercicio-16.md
+      - "Exercício 17": 08-classes/exercicio-17.md
+  - Projetos:
+      - 09-projetos/index.md
+      - "Projeto 01": 09-projetos/projeto-01.md
+      - "Projeto 02": 09-projetos/projeto-02.md
+      - "Projeto 03": 09-projetos/projeto-03.md
+  - Dados:
+      - 10-dados/index.md
+      - "Exercício 01": 10-dados/exercicio-01.md
+      - "Exercício 02": 10-dados/exercicio-02.md
+      - "Exercício 03": 10-dados/exercicio-03.md
+      - "Exercício 04": 10-dados/exercicio-04.md
+      - "Exercício 05": 10-dados/exercicio-05.md
+      - "Exercício 06": 10-dados/exercicio-06.md
